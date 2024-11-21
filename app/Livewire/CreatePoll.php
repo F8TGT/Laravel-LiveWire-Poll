@@ -13,7 +13,7 @@ class CreatePoll extends Component
     public $title;
 
     #[Validate([
-        'options' =>'required|array|min:1|max:10',
+        'options' => 'required|array|min:1|max:10',
         'options.*' => 'required|min:3|max:255',
     ], message: [
         'options.*.required' => 'The option can\'t be empty.',
